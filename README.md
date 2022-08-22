@@ -1,6 +1,6 @@
 # chenglaihuang conflict
 
-line 1, stack 2
+line 1, stack 2, conflict in main
 
 line 2
 
