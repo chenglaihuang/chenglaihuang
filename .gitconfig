@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[alias]
+        s = status
+        co = checkout
+        br = branch --sort=-committerdate
+        cm = commit -a -m
+        a = add -A
+        cp = cherry-pick
+        cmn = commit -a --no-verify -m
+        soft = reset --soft HEAD~1
+        hard = reset --hard
+	forget = update-index --assume-unchanged gradle.properties
+	pp = "!push() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; push"
+	rs = restore --staged
+	ds = diff --staged
+[user]
+        email = chenglai@duolingo.com
+        name = chenglaihuang
+[init]
+	templateDir = /Users/chenglai/.git-template
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/chenglai/.gitignore
