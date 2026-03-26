@@ -15,7 +15,7 @@ function startStory() {
 }
 
 function startSessionEndScreen() {
-  local screenId="${1:-sessionComplete}"
+  local screenId="${1:-dailyquest}"
   showdebug session-end-screens
   sleep 2
   adb shell input keyevent 61 # tab

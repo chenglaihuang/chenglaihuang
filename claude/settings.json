@@ -1,0 +1,86 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew:*)",
+      "Bash(aws:*)",
+      "Bash(cd:*)",
+      "Bash(chmod:*)",
+      "Bash(duo:*)",
+      "Bash(gh:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git commit:*)",
+      "Bash(git diff:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+      "Bash(git merge:*)",
+      "Bash(git push:*)",
+      "Bash(git rebase:*)",
+      "Bash(git stash:*)",
+      "Bash(git status:*)",
+      "Bash(ls:*)",
+      "Bash(pip3:*)",
+      "Bash(pip:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(scripts/create-test:*)",
+      "Bash(xargs:*)",
+      "Read(//Users/chenglaihuang/Downloads/**)",
+      "mcp__github__get_commit",
+      "mcp__github__get_file_contents",
+      "mcp__github__get_me",
+      "mcp__github__issue_read",
+      "mcp__github__list_commits",
+      "mcp__github__list_issues",
+      "mcp__github__list_pull_requests",
+      "mcp__github__pull_request_read",
+      "mcp__github__search_code",
+      "mcp__github__search_issues",
+      "mcp__github__search_pull_requests",
+      "mcp__github__search_repositories",
+      "mcp__ide__getDiagnostics",
+      "mcp__jenkins-mcp__get_all_jobs",
+      "mcp__jenkins-mcp__get_build_info",
+      "mcp__jenkins-mcp__get_build_logs",
+      "mcp__jenkins-mcp__get_jenkins_clusters",
+      "mcp__jenkins-mcp__get_job_config",
+      "mcp__jenkins-mcp__get_job_info",
+      "mcp__jenkins-mcp__search_jobs"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits"
+  },
+  "model": "opus[1m]",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Waiting for your input' -sender com.apple.Terminal -sound 'Glass'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Waiting for your input' -sender com.apple.Terminal -sound 'Glass'"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {},
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754063115898
+  }
+}
